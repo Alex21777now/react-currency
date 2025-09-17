@@ -1,0 +1,28 @@
+/* HeartButton.css */
+.heart-button {
+    background-color: rgb(185, 93, 93);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
+    width: 72px;
+    height: 72px;
+    font-size: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    outline: none;
+    
+  }
+  
+  .heart-button:hover {
+    background-color: red;
+  }
+  
+  .heart-button span {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
