@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from "react";
-
-
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import FirstComponent_1 from './Components/FirstComponent_1';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navbar";
+import CurrentRates from "./pages/CurrentRates";
+import CurrencyHistory from "./pages/CurrencyHistory";
 
 function App() {
-  
-
-
   return (
-    <div className="App">
-      <Header />
-
-      {/*<FirstComponent_1 />*/}
-      
-      <Footer />
-    </div>
+    <Router>
+      <Navigation />
+      <br/>
+      <div><center>by Alex B</center></div>
+      <Routes>
+        <Route path="/" element={<CurrentRates />} />
+        <Route path="/history" element={<CurrencyHistory />} />
+      </Routes>
+    </Router>
   );
 }
 
